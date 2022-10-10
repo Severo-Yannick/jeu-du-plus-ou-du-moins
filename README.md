@@ -4,7 +4,7 @@
 
 Création du jeu du plus ou moins avec le language rust.
 
-## Installer Rust sur masos et linux
+## Installer Rust sur macos et linux
 
 Exécutez la commande suivante dans votre terminal, puis suivez les instructions.<br>
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
@@ -32,3 +32,6 @@ Voir la version de cargo, il c'est installé avec rust.<br>
 
 Créer un nouveau projet avec cargo.<br>
 `cargo new le-nom-du-projet`
+
+Lancer l'application.<br>
+`cargo run`
