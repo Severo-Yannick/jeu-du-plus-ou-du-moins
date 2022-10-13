@@ -2,6 +2,8 @@
 use std::io;
 // Rand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.
 use rand::Rng;
+// cmp is functionality for ordering and comparison.
+use std::cmp::Ordering;
 
 fn main() {
     println!("Devinez le nombre !");
@@ -15,6 +17,14 @@ fn main() {
     io::stdin()
         .read_line(&mut assumption)
         .expect("Echec de la lecture de l'entrée utilisateur");
+    
+        let assumption: u32 = assumption.trim().parse().expect("Veuillez entrer un nombre !");
 
         println!("Votre nombre : {assumption}");
+        // match control flow based on pattern matching.
+        match assumption.cmp(&secret_number) {
+            Ordering::Less => println!("C'est plus !"),
+            Ordering::Greater => println!("C'est moins !"),
+            Ordering::Equal => println!("Vous avez gagné !"),
+        }
 }
